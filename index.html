@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+	{{message}}
+	<h2>{{number + 10}}</h2>
+	<h1>{{isActive ? 'Is Active' : 'Is Not Active'}}</h1>
+	<h1>{{message.split('').reverse('').join('')}}</h1>
+</div>
+
+<script>
+let vm = new Vue({
+	el: '#app',
+	data:{
+		message: 'Hello',
+		number: 10,
+		isActive: false
+}
+})
+
+</script>
+
 </html>
